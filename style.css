@@ -38,6 +38,49 @@ header {
   border: 1px solid #5e63b6;
 }
 
+.current-weather-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  padding: 20px 0;
+}
+
+.current-weather-city {
+  margin: 0;
+  line-height: 35px;
+}
+
+.current-weather-details {
+  color: #acabaf;
+  line-height: 23px;
+}
+
+.current-weather-details strong {
+  color: #5fc9f3;
+}
+
+.current-weather-temp-value {
+  font-size: 80px;
+  font-weight: bold;
+  position: relative;
+  top: 7px;
+}
+
+.current-weather-temp-icon {
+  position: relative;
+  margin-right: 8px;
+  top: -3px;
+  font-size: 40px;
+}
+
+.current-weather-temp-unit {
+  font-size: 28px;
+  position: relative;
+  top: -28px;
+}
+
 a {
   color: #2e79ba;
   text-decoration: none;
@@ -46,6 +89,6 @@ a {
 footer {
   border-top: 1px solid #e1dfe4;
   padding: 15px 0px 0 0;
-  margin-top: 30px;
+  margin-top: 10px;
   text-align: center;
 }
