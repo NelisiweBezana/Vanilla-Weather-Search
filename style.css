@@ -24,7 +24,7 @@ header {
   background-color: #e1dfe4;
   border: none;
   border-radius: 5px;
-  width: 80%;
+  width: 75%;
   padding: 15px 10px;
   border-radius: 10px;
 }
@@ -41,6 +41,7 @@ header {
 a {
   color: #2e79ba;
 }
+
 footer {
   border-top: 1px solid #e1dfe4;
   padding: 15px 0px 0 0;
