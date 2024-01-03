@@ -10,14 +10,20 @@ function search(event) {
 }
 
 function displayTemperature(response) {
-  let currentTemp = Math.round(response.data.temperature.current);
-  let city = response.data.city;
-
   let currentTempValue = document.querySelector(".current-weather-temp-value");
-  currentTempValue.innerHTML = currentTemp;
+  currentTempValue.innerHTML = Math.round(response.data.temperature.current);
 
   let currentCity = document.querySelector(".current-weather-city");
-  currentCity.innerHTML = city;
+  currentCity.innerHTML = response.data.city;
+
+  let weatherDesciption = document.querySelector("#weather-condition");
+  weatherDesciption.innerHTML = response.data.condition.description;
+
+  let humidity = document.querySelector("#humidity-value");
+  humidity.innerHTML = `${response.data.temperature.humidity}%`;
+
+  let windSpeed = document.querySelector("#windspeed-value");
+  windSpeed.innerHTML = `${response.data.wind.speed}km/h`;
 }
 
 let searchCityForm = document.querySelector("#search-form");
