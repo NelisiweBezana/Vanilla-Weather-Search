@@ -24,6 +24,32 @@ function displayTemperature(response) {
 
   let windSpeed = document.querySelector("#windspeed-value");
   windSpeed.innerHTML = `${response.data.wind.speed}km/h`;
+
+  let date = new Date(response.data.time * 1000);
+  let dateAndTime = document.querySelector("#date-and-time");
+  dateAndTime.innerHTML = showDate(date);
+}
+
+function showDate(date) {
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let day = days[date.getDay()];
+
+  let currentTimeHours = date.getHours();
+  let currentTimeMinutes = date.getMinutes();
+  let fullCurrentTime = `${currentTimeHours}:${
+    currentTimeMinutes < 10 ? "0" : ""
+  }${currentTimeMinutes}`;
+
+  return `${day} ${fullCurrentTime}`;
 }
 
 let searchCityForm = document.querySelector("#search-form");
