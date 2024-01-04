@@ -1,4 +1,4 @@
-function search(event) {
+function searchCity(event) {
   event.preventDefault();
   let searchInput = document.querySelector(".search-form-input");
   let city = searchInput.value;
@@ -53,4 +53,4 @@ function showDate(date) {
 }
 
 let searchCityForm = document.querySelector("#search-form");
-searchCityForm.addEventListener("submit", search);
+searchCityForm.addEventListener("submit", searchCity);
