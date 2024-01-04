@@ -61,24 +61,26 @@ main {
   color: #5fc9f3;
 }
 
+.current-weather-temp {
+  display: flex;
+}
+
 .current-weather-temp-value {
   font-size: 80px;
   font-weight: bold;
-  position: relative;
-  top: 7px;
+  line-height: 88px;
 }
 
 .current-weather-temp-icon {
-  position: relative;
-  margin-right: 8px;
-  top: -3px;
-  font-size: 40px;
+  width: 88px;
+  height: 88px;
+  margin-left: 10px;
 }
 
 .current-weather-temp-unit {
   font-size: 28px;
-  position: relative;
-  top: -28px;
+  margin-left: 5px;
+  margin-top: 10px;
 }
 
 a {

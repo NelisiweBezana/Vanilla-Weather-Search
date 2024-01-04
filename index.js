@@ -28,6 +28,9 @@ function displayTemperature(response) {
   let date = new Date(response.data.time * 1000);
   let dateAndTime = document.querySelector("#date-and-time");
   dateAndTime.innerHTML = showDate(date);
+
+  let weatherIcon = document.querySelector("#current-weather-temp-icon");
+  weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class="current-weather-temp-icon" />`;
 }
 
 function showDate(date) {
